@@ -9,7 +9,7 @@ node{
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
    stage('Build Docker Imager'){
-   sh 'docker build -t sample .
+   sh 'docker build -t sample . '
    }
   # stage('Docker Image Push'){
   # sh "docker login -u dhivya1995 -p 1234567890"
