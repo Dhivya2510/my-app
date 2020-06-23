@@ -9,13 +9,13 @@ node{
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
    stage('Build Docker Imager'){
-   sh 'docker build -t dhivya1995/myweb:0.0.2 .'
+   sh 'docker build -t sample .
    }
-   stage('Docker Image Push'){
-   sh "docker login -u dhivya1995 -p 1234567890"
+  # stage('Docker Image Push'){
+  # sh "docker login -u dhivya1995 -p 1234567890"
  
-   sh 'docker push dhivya1995/myweb:0.0.2'
-   }
+   #sh 'docker push dhivya1995/myweb:0.0.2'
+   #}
    
     stage('Remove Previous Container'){
 	try{
